@@ -21,6 +21,13 @@
 
 #include <glib-object.h>
 
+#ifdef G_OS_WIN32
+#define STRICT
+#include <windows.h>
+#undef STRICT
+#undef FOCUS_EVENT		/* <windows.h> pollutes the namespace */
+#endif
+
 #include "atk.h"
 #include "atkmarshal.h"
 #include "atk-enum-types.h"
@@ -1162,6 +1169,23 @@ atk_role_get_name (AtkRole role)
   return name;
 }
 
+#ifdef G_OS_WIN32
+
+#undef ATKLOCALEDIR
+
+#define ATKLOCALEDIR get_atk_locale_dir()
+
+G_WIN32_DLLMAIN_FOR_DLL_NAME(static, dll_name)
+
+static char *
+get_atk_locale_dir (void)
+{
+  return g_win32_get_package_installation_subdirectory
+    (GETTEXT_PACKAGE, dll_name, "lib/locale");
+}
+
+#endif
+
 /**
  * atk_role_get_localized_name:
  * @role: The #AtkRole whose localized name is required
@@ -1179,6 +1203,8 @@ atk_role_get_localized_name (AtkRole role)
 #ifdef ENABLE_NLS
   if (!gettext_initialized)
     {
+      gettext_initialized = TRUE;
+
       bindtextdomain (GETTEXT_PACKAGE, ATKLOCALEDIR);
 #ifdef HAVE_BIND_TEXTDOMAIN_CODESET
       bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");

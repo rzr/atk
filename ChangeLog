@@ -1,3 +1,28 @@
+2003-06-13  Tor Lillqvist  <tml@iki.fi>
+
+	* atk/atkobject.c (atk_role_get_localized_name): Set
+	gettext_initialized.
+
+	* atk-zip.sh.in (DEVZIP): libtool 1.5 installs DLLs in the bin
+	directory, so look there, too. Include the message catalogs.
+
+	Merge from HEAD:
+
+	* Makefile.am (EXTRA_DIST): Dist atk-zip.sh.in, not atk-zip.sh.
+
+	* atk/atk.def: Add missing entries, thanks to Cedric Gustin.
+
+	* atk/atk.rc.in: New file, for version info in the DLL on
+	Windows. Similar as in GLib, GTK, etc.
+
+	* configure.in: Expand atk/atk.rc.
+
+	* atk/Makefile.am: Use atk.rc on Windows.
+	(EXTRA_DIST): Distribute atk.rc.in.
+
+	* atk/atkobject.c: On Windows, don't use hardcoded ATKLOCALEDIR,
+	but deduce it from DLL location, like GLib, GTK etc do.
+
 2003-05-20  Telsa Gwynne  <hobbit@aloss.ukuu.org.uk>
 
 	* configure.in: Added cy to ALL_LINGUAS

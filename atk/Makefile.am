@@ -2,10 +2,12 @@
 # which are more like other make's VPATH.
 GPATH = $(srcdir)
 
-EXTRA_DIST = atk.def
+EXTRA_DIST = atk.def atk.rc.in
 if OS_WIN32
 export_symbols = -export-symbols atk.def
 no_undefined = -no-undefined
+
+libatk_1_0_la_LIBADD += atk-win32res.lo
 
 install-libtool-import-lib:
 	$(INSTALL) .libs/libatk-$(ATK_API_VERSION).dll.a $(DESTDIR)$(libdir)
@@ -15,6 +17,9 @@ else
 install-libtool-import-lib:
 uninstall-libtool-import-lib:
 endif
+
+atk-win32res.lo: atk.rc
+	$(top_srcdir)/../glib/build/win32/lt-compile-resource $< $@
 
 lib_LTLIBRARIES = libatk-1.0.la
 
