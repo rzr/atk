@@ -6,11 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: atk 2.2\n"
-"POT-Creation-Date: 2003-04-15 17:17+0100\n"
+"POT-Creation-Date: 2003-05-05 03:28+0200\n"
 "PO-Revision-Date: 2003-03-20 19:22+0530\n"
-"Last-Translator: G Karunakar <karunakar@freedomink.org>\n"
-"Language-Team: Gnome Hindi Team <indlinux-hindi-gnome@lists.sourceforge."
-"net>\n"
+"Last-Translator: Anand Subramanian <anand.subra@wipro.com>\n"
+"Language-Team: Gnome Hindi Team <indlinux-hindi-gnome@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,7 +28,7 @@ msgstr "सावधान"
 
 #: atk/atkobject.c:1201
 msgid "animation"
-msgstr ""
+msgstr "जीवन्तता"
 
 #: atk/atkobject.c:1204
 msgid "arrow"
@@ -41,39 +40,39 @@ msgstr "केलेण्डर"
 
 #: atk/atkobject.c:1210
 msgid "canvas"
-msgstr ""
+msgstr "कैनवास"
 
 #: atk/atkobject.c:1213
 msgid "check-box"
-msgstr ""
+msgstr "चेक-बाक्स"
 
 #: atk/atkobject.c:1216
 msgid "check-menu-item"
-msgstr ""
+msgstr "चेक-मेनू-अईटेम"
 
 #: atk/atkobject.c:1219
 msgid "color-chooser"
-msgstr ""
+msgstr "रंग चुननेवाला"
 
 #: atk/atkobject.c:1222
 msgid "column-header"
-msgstr ""
+msgstr "कालम-हैडर"
 
 #: atk/atkobject.c:1225
 msgid "combo-box"
-msgstr ""
+msgstr "काम्बो-बाक्स"
 
 #: atk/atkobject.c:1228
 msgid "date-editor"
-msgstr ""
+msgstr "तिथि-सम्पादक"
 
 #: atk/atkobject.c:1231
 msgid "desktop-icon"
-msgstr ""
+msgstr "डेस्कटाप-आयकन"
 
 #: atk/atkobject.c:1234
 msgid "desktop-frame"
-msgstr ""
+msgstr "डेस्कटाप-रूपरेखा"
 
 #: atk/atkobject.c:1237
 msgid "dial"
@@ -85,35 +84,35 @@ msgstr "डॉयलॉग"
 
 #: atk/atkobject.c:1243
 msgid "directory-pane"
-msgstr ""
+msgstr "डायरेक्टरी-फलक"
 
 #: atk/atkobject.c:1246
 msgid "drawing-area"
-msgstr ""
+msgstr "ड्रॉइंग-क्षेत्र"
 
 #: atk/atkobject.c:1249
 msgid "file-chooser"
-msgstr ""
+msgstr "फाइल-चुननेवाला"
 
 #: atk/atkobject.c:1252
 msgid "filler"
-msgstr ""
+msgstr "फिल्लर"
 
 #: atk/atkobject.c:1255
 msgid "font-chooser"
-msgstr ""
+msgstr "फोन्ट-चुने"
 
 #: atk/atkobject.c:1258
 msgid "frame"
-msgstr ""
+msgstr "रूपरेखा"
 
 #: atk/atkobject.c:1261
 msgid "glass-pane"
-msgstr ""
+msgstr "काँच का फलक"
 
 #: atk/atkobject.c:1264
 msgid "html-container"
-msgstr ""
+msgstr "HTML कन्टेनर"
 
 #: atk/atkobject.c:1267
 msgid "icon"
@@ -125,7 +124,7 @@ msgstr "चित्र"
 
 #: atk/atkobject.c:1273
 msgid "internal-frame"
-msgstr ""
+msgstr "आन्तरिक रूपरेखा"
 
 #: atk/atkobject.c:1276
 msgid "label"
@@ -133,7 +132,7 @@ msgstr "लेबल"
 
 #: atk/atkobject.c:1279
 msgid "layered-pane"
-msgstr ""
+msgstr "परतीला-फलक"
 
 #: atk/atkobject.c:1282
 msgid "list"
@@ -141,119 +140,119 @@ msgstr "सूची"
 
 #: atk/atkobject.c:1285
 msgid "list-item"
-msgstr ""
+msgstr "सूची-अईटेम"
 
 #: atk/atkobject.c:1288
 msgid "menu"
-msgstr ""
+msgstr "मेनू"
 
 #: atk/atkobject.c:1291
 msgid "menu-bar"
-msgstr ""
+msgstr "मेनू-बार"
 
 #: atk/atkobject.c:1294
 msgid "menu-item"
-msgstr ""
+msgstr "मेनू-अईटेम"
 
 #: atk/atkobject.c:1297
 msgid "option-pane"
-msgstr ""
+msgstr "विकल्प-फलक"
 
 #: atk/atkobject.c:1300
 msgid "page-tab"
-msgstr ""
+msgstr "पेज-टैब"
 
 #: atk/atkobject.c:1303
 msgid "page-tab-list"
-msgstr ""
+msgstr "पेज-टैब-सूची"
 
 #: atk/atkobject.c:1306
 msgid "panel"
-msgstr ""
+msgstr "पेनल"
 
 #: atk/atkobject.c:1309
 msgid "password-text"
-msgstr ""
+msgstr "संकेत-शब्द पाठ्य"
 
 #: atk/atkobject.c:1312
 msgid "popup-menu"
-msgstr ""
+msgstr "पाॅप-अप मेनू"
 
 #: atk/atkobject.c:1315
 msgid "progress-bar"
-msgstr ""
+msgstr "प्रगति-बार"
 
 #: atk/atkobject.c:1318
 msgid "push-button"
-msgstr ""
+msgstr "पुश्-बटन"
 
 #: atk/atkobject.c:1321
 msgid "radio-button"
-msgstr ""
+msgstr "रेडियो-बटन"
 
 #: atk/atkobject.c:1324
 msgid "radio-menu-item"
-msgstr ""
+msgstr "रेडियो-मेनू-अईटेम"
 
 #: atk/atkobject.c:1327
 msgid "root-pane"
-msgstr ""
+msgstr "रूट फलक"
 
 #: atk/atkobject.c:1330
 msgid "row-header"
-msgstr ""
+msgstr "पंक्ति-हैडर"
 
 #: atk/atkobject.c:1333
 msgid "scroll-bar"
-msgstr ""
+msgstr "स्क्रोल-बार"
 
 #: atk/atkobject.c:1336
 msgid "scroll-pane"
-msgstr ""
+msgstr "स्क्रोल-फलक"
 
 #: atk/atkobject.c:1339
 msgid "separator"
-msgstr ""
+msgstr "विभाजक"
 
 #: atk/atkobject.c:1342
 msgid "slider"
-msgstr ""
+msgstr "स्लाइडर"
 
 #: atk/atkobject.c:1345
 msgid "split-pane"
-msgstr ""
+msgstr "कटा-फलक"
 
 #: atk/atkobject.c:1348
 msgid "spin-button"
-msgstr ""
+msgstr "स्पिन-बटन"
 
 #: atk/atkobject.c:1351
 msgid "statusbar"
-msgstr ""
+msgstr "स्टेटस-बार"
 
 #: atk/atkobject.c:1354
 msgid "table"
-msgstr ""
+msgstr "टेबल"
 
 #: atk/atkobject.c:1357
 msgid "table-cell"
-msgstr ""
+msgstr "टेबल-सेल"
 
 #: atk/atkobject.c:1360
 msgid "table-column-header"
-msgstr ""
+msgstr "टेबल-कालम-हैडर"
 
 #: atk/atkobject.c:1363
 msgid "table-row-header"
-msgstr ""
+msgstr "टेबल-पंक्ति-हैडर"
 
 #: atk/atkobject.c:1366
 msgid "tear-off-menu-item"
-msgstr ""
+msgstr "टेर-आफ्-मेनू-अईटेम"
 
 #: atk/atkobject.c:1369
 msgid "terminal"
-msgstr ""
+msgstr "टर्मिनल"
 
 #: atk/atkobject.c:1372
 msgid "text"
@@ -261,23 +260,23 @@ msgstr "फाठ्य"
 
 #: atk/atkobject.c:1375
 msgid "toggle-button"
-msgstr ""
+msgstr "टागल-बटन"
 
 #: atk/atkobject.c:1378
 msgid "tool-bar"
-msgstr ""
+msgstr "टूलबार"
 
 #: atk/atkobject.c:1381
 msgid "tool-tip"
-msgstr ""
+msgstr "टूलटिप"
 
 #: atk/atkobject.c:1384
 msgid "tree"
-msgstr ""
+msgstr "ट्री"
 
 #: atk/atkobject.c:1387
 msgid "tree-table"
-msgstr ""
+msgstr "ट्री-टेबल"
 
 #: atk/atkobject.c:1390
 msgid "unknown"
@@ -285,7 +284,7 @@ msgstr "अंजान"
 
 #: atk/atkobject.c:1393
 msgid "viewport"
-msgstr ""
+msgstr "व्यूपोर्ट"
 
 #: atk/atkobject.c:1396
 msgid "window"
@@ -293,19 +292,19 @@ msgstr "विंडो"
 
 #: atk/atkobject.c:1399
 msgid "header"
-msgstr ""
+msgstr "हैडर"
 
 #: atk/atkobject.c:1402
 msgid "footer"
-msgstr ""
+msgstr "फुटर"
 
 #: atk/atkobject.c:1405
 msgid "paragraph"
-msgstr ""
+msgstr "पैराग्राफ"
 
 #: atk/atkobject.c:1408
 msgid "ruler"
-msgstr ""
+msgstr "रूलर"
 
 #: atk/atkobject.c:1411
 msgid "application"
