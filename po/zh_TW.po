@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: atk 1.2.3\n"
-"POT-Creation-Date: 2003-05-11 06:49+0800\n"
-"PO-Revision-Date: 2003-05-11 06:51+0800\n"
+"Project-Id-Version: atk 1.2.4\n"
+"POT-Creation-Date: 2003-05-27 20:10+0800\n"
+"PO-Revision-Date: 2003-05-27 20:11+0800\n"
 "Last-Translator: Abel Cheung <maddog@linux.org.hk>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
 "MIME-Version: 1.0\n"
@@ -59,7 +59,7 @@ msgstr "獨立選擇按鈕"
 #. TRANSLATOR: A menu item with a check box
 #: atk/atkobject.c:1228
 msgid "check-menu-item"
-msgstr "單項選擇選單項目"
+msgstr "獨立選擇選單項目"
 
 #. TRANSLATOR: A specialized dialog that lets the user choose a color
 #: atk/atkobject.c:1232
@@ -103,7 +103,7 @@ msgstr "微調按鈕"
 #. TRANSLATOR: A top level window with title bar and a border
 #: atk/atkobject.c:1263
 msgid "dialog"
-msgstr "對話窗"
+msgstr "對話方塊"
 
 #. TRANSLATOR: A pane that allows the user to navigate through and
 #. * select the contents of a directory
@@ -238,7 +238,7 @@ msgstr "密碼"
 #. * of choices, and then hides when the user selects one of those choices
 #: atk/atkobject.c:1373
 msgid "popup-menu"
-msgstr "彈出式選單"
+msgstr "快顯選單"
 
 #. TRANSLATOR: An object used to indicate how much of a task has been completed
 #: atk/atkobject.c:1377
@@ -272,7 +272,7 @@ msgstr "根視窗"
 #. TRANSLATOR: The header for a row of data
 #: atk/atkobject.c:1401
 msgid "row-header"
-msgstr "一行資料的標題"
+msgstr "一橫列資料的標題"
 
 #. TRANSLATOR: An object usually used to allow a user to incrementally
 #. * view a large amount of data.
@@ -301,7 +301,7 @@ msgstr "數值選擇杆"
 #. * the same time
 #: atk/atkobject.c:1425
 msgid "split-pane"
-msgstr "分隔控制項"
+msgstr "視窗分隔元件"
 
 #. TRANSLATOR: An object used to get an integer or floating point
 #. * number from the user
