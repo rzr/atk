@@ -3,19 +3,19 @@
 GPATH = $(srcdir)
 
 EXTRA_DIST = atk.def atk.rc.in
-if OS_WIN32
+
+if PLATFORM_WIN32
 export_symbols = -export-symbols atk.def
 no_undefined = -no-undefined
+endif
 
+if OS_WIN32
 libatk_1_0_la_LIBADD += atk-win32res.lo
 
 install-libtool-import-lib:
 	$(INSTALL) .libs/libatk-$(ATK_API_VERSION).dll.a $(DESTDIR)$(libdir)
 uninstall-libtool-import-lib:
 	-rm $(DESTDIR)$(libdir)/libatk-$(ATK_API_VERSION).dll.a
-else
-install-libtool-import-lib:
-uninstall-libtool-import-lib:
 endif
 
 atk-win32res.lo: atk.rc
@@ -31,9 +31,6 @@ install-ms-lib:
 
 uninstall-ms-lib:
 	-rm $(DESTDIR)$(libdir)/atk-$(ATK_API_VERSION).lib
-else
-install-ms-lib:
-uninstall-ms-lib:
 endif
 
 atk_built_headers = atk-enum-types.h
@@ -70,7 +67,7 @@ libatk_1_0_la_SOURCES = 	\
 EXTRA_DIST += atkmarshal.list	\
 		atkintl.h
 
-MAINTAINERCLEANFILES += 	\
+MAINTAINERCLEANFILES =	 	\
 	atkmarshal.c		\
 	atkmarshal.h		\
 	stamp-atkmarshal.c	\
@@ -82,10 +79,10 @@ INCLUDES = \
 	@DEP_CFLAGS@		\
 	-DATKLOCALEDIR=\""$(atklocaledir)"\"
 
-LDFLAGS =  					\
+AM_LDFLAGS =  					\
 	-version-info $(LT_VERSION_INFO)	\
 	$(export_symbols)			\
-	$(no_undefined)				\
+	-no-undefined				\
 	@DEP_LIBS@
 
 libatkincludedir=$(includedir)/atk-1.0/atk
@@ -176,10 +173,12 @@ s-enum-types-c: @REBUILD@ $(atk_headers) Makefile
 	&& rm -f tmp-atk-enum-types.c \
 	&& echo timestamp > $(@F)
 
-
+# This doesn't want doing when building Cygwin DLLs
+if OS_WIN32
 atk-$(ATK_API_VERSION).lib: libatk-$(ATK_API_VERSION).la atk.def
 	lib -name:libatk-$(ATK_API_VERSION)-@LT_CURRENT_MINUS_AGE@.dll -def:atk.def -out:$@
 
 install-data-local: install-ms-lib install-libtool-import-lib
 
 uninstall-local: uninstall-ms-lib uninstall-libtool-import-lib
+endif
