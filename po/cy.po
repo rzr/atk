@@ -1,0 +1,314 @@
+# GNOME yn Gymraeg.
+# Copyright (C) 2003 Free Software Foundation, Inc.
+# This file is distributed under the same license as the ATK package.
+# Dafydd Harries <daf@parnassus.ath.cx>, 2003.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: atk\n"
+"POT-Creation-Date: 2003-05-20 04:31+0200\n"
+"PO-Revision-Date: 2003-05-15 01:58+0100\n"
+"Last-Translator: Dafydd Harries <daf@parnassus.ath.cx>\n"
+"Language-Team: Welsh <gnome-cy@pengwyn.linux.org.uk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: atk/atkobject.c:1192
+msgid "invalid"
+msgstr "annilys"
+
+#: atk/atkobject.c:1195
+msgid "accel-label"
+msgstr "label-cyflymu"
+
+#: atk/atkobject.c:1198
+msgid "alert"
+msgstr "rhybudd"
+
+#: atk/atkobject.c:1201
+msgid "animation"
+msgstr "animeiddiad"
+
+#: atk/atkobject.c:1204
+msgid "arrow"
+msgstr "saeth"
+
+#: atk/atkobject.c:1207
+msgid "calendar"
+msgstr "calendr"
+
+#: atk/atkobject.c:1210
+msgid "canvas"
+msgstr "cynfas"
+
+#: atk/atkobject.c:1213
+msgid "check-box"
+msgstr "blwch-dewis"
+
+#: atk/atkobject.c:1216
+msgid "check-menu-item"
+msgstr "eitem-dewislen-dewis"
+
+#: atk/atkobject.c:1219
+msgid "color-chooser"
+msgstr "dewiswr-lliw"
+
+#: atk/atkobject.c:1222
+msgid "column-header"
+msgstr "pennawd-colofn"
+
+#: atk/atkobject.c:1225
+msgid "combo-box"
+msgstr "blwch-cyfun"
+
+#: atk/atkobject.c:1228
+msgid "date-editor"
+msgstr "newidydd-dyddiad"
+
+#: atk/atkobject.c:1231
+msgid "desktop-icon"
+msgstr "eicon-bwrdd-gwaith"
+
+#: atk/atkobject.c:1234
+msgid "desktop-frame"
+msgstr "ffrâm-bwrdd-gwaith"
+
+#: atk/atkobject.c:1237
+msgid "dial"
+msgstr "deial"
+
+#: atk/atkobject.c:1240
+msgid "dialog"
+msgstr "deialog"
+
+# EFALLAI
+#: atk/atkobject.c:1243
+msgid "directory-pane"
+msgstr "chwarel-cyfeiriadur"
+
+#: atk/atkobject.c:1246
+msgid "drawing-area"
+msgstr "ardal-arlunio"
+
+#: atk/atkobject.c:1249
+msgid "file-chooser"
+msgstr "dewiswr-ffeiliau"
+
+#: atk/atkobject.c:1252
+msgid "filler"
+msgstr "llenwydd"
+
+#: atk/atkobject.c:1255
+msgid "font-chooser"
+msgstr "dewiswr-ffont"
+
+#: atk/atkobject.c:1258
+msgid "frame"
+msgstr "ffrâm"
+
+#: atk/atkobject.c:1261
+msgid "glass-pane"
+msgstr "chwarel-wydr"
+
+#: atk/atkobject.c:1264
+msgid "html-container"
+msgstr "cynhwysydd-html"
+
+#: atk/atkobject.c:1267
+msgid "icon"
+msgstr "eicon"
+
+#: atk/atkobject.c:1270
+msgid "image"
+msgstr "delwedd"
+
+#: atk/atkobject.c:1273
+msgid "internal-frame"
+msgstr "ffrâm-mewnol"
+
+#: atk/atkobject.c:1276
+msgid "label"
+msgstr "label"
+
+#: atk/atkobject.c:1279
+msgid "layered-pane"
+msgstr "chwarel-wedi-haenu"
+
+#: atk/atkobject.c:1282
+msgid "list"
+msgstr "rhestr"
+
+#: atk/atkobject.c:1285
+msgid "list-item"
+msgstr "eitem-rhestr"
+
+#: atk/atkobject.c:1288
+msgid "menu"
+msgstr "dewislen"
+
+#: atk/atkobject.c:1291
+msgid "menu-bar"
+msgstr "bar-dewislen"
+
+#: atk/atkobject.c:1294
+msgid "menu-item"
+msgstr "eitem-dewislen"
+
+#: atk/atkobject.c:1297
+msgid "option-pane"
+msgstr "chwarel-opsiwn"
+
+#: atk/atkobject.c:1300
+msgid "page-tab"
+msgstr "chwarel-tab"
+
+#: atk/atkobject.c:1303
+msgid "page-tab-list"
+msgstr "rhestr-chwarel-tab"
+
+#: atk/atkobject.c:1306
+msgid "panel"
+msgstr "panel"
+
+#: atk/atkobject.c:1309
+msgid "password-text"
+msgstr "testun-cyfrinair"
+
+#: atk/atkobject.c:1312
+msgid "popup-menu"
+msgstr "naidlen"
+
+#: atk/atkobject.c:1315
+msgid "progress-bar"
+msgstr "bar-cynydd"
+
+#: atk/atkobject.c:1318
+msgid "push-button"
+msgstr "botwm-gwasgu"
+
+#: atk/atkobject.c:1321
+msgid "radio-button"
+msgstr "botwm-radio"
+
+#: atk/atkobject.c:1324
+msgid "radio-menu-item"
+msgstr "eitem-dewislen-radio"
+
+#: atk/atkobject.c:1327
+msgid "root-pane"
+msgstr "chwarel-gwraidd"
+
+#: atk/atkobject.c:1330
+msgid "row-header"
+msgstr "pennawd-rhes"
+
+#: atk/atkobject.c:1333
+msgid "scroll-bar"
+msgstr "bar-sgrolio"
+
+#: atk/atkobject.c:1336
+msgid "scroll-pane"
+msgstr "chwarel-sgrolio"
+
+#: atk/atkobject.c:1339
+msgid "separator"
+msgstr "gwahannwr"
+
+#: atk/atkobject.c:1342
+msgid "slider"
+msgstr "llithrwr"
+
+#: atk/atkobject.c:1345
+msgid "split-pane"
+msgstr "chwarel-hollt"
+
+#: atk/atkobject.c:1348
+msgid "spin-button"
+msgstr "botwm-troelli"
+
+#: atk/atkobject.c:1351
+msgid "statusbar"
+msgstr "bar-statws"
+
+#: atk/atkobject.c:1354
+msgid "table"
+msgstr "tabl"
+
+#: atk/atkobject.c:1357
+msgid "table-cell"
+msgstr "cell-tabl"
+
+#: atk/atkobject.c:1360
+msgid "table-column-header"
+msgstr "pennawd-colofn-tabl"
+
+#: atk/atkobject.c:1363
+msgid "table-row-header"
+msgstr "pennawd-rhes-tabl"
+
+#: atk/atkobject.c:1366
+msgid "tear-off-menu-item"
+msgstr "eitem-dewislen-rhwygadwy"
+
+#: atk/atkobject.c:1369
+msgid "terminal"
+msgstr "terfynell"
+
+#: atk/atkobject.c:1372
+msgid "text"
+msgstr "testun"
+
+# EFALLAI
+#: atk/atkobject.c:1375
+msgid "toggle-button"
+msgstr "botwm-togl"
+
+#: atk/atkobject.c:1378
+msgid "tool-bar"
+msgstr "bar-offer"
+
+#: atk/atkobject.c:1381
+msgid "tool-tip"
+msgstr "cyngor"
+
+#: atk/atkobject.c:1384
+msgid "tree"
+msgstr "coeden"
+
+#: atk/atkobject.c:1387
+msgid "tree-table"
+msgstr "tabl-coeden"
+
+#: atk/atkobject.c:1390
+msgid "unknown"
+msgstr "anhysbys"
+
+# EFALLAI
+#: atk/atkobject.c:1393
+msgid "viewport"
+msgstr "porth-golwg"
+
+#: atk/atkobject.c:1396
+msgid "window"
+msgstr "ffenest"
+
+#: atk/atkobject.c:1399
+msgid "header"
+msgstr "penawd"
+
+#: atk/atkobject.c:1402
+msgid "footer"
+msgstr "troedyn"
+
+#: atk/atkobject.c:1405
+msgid "paragraph"
+msgstr "paragraff"
+
+#: atk/atkobject.c:1408
+msgid "ruler"
+msgstr "mesur"
+
+#: atk/atkobject.c:1411
+msgid "application"
+msgstr "rhaglen"
