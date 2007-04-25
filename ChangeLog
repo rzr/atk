@@ -1,3 +1,7 @@
+2007-04-25  Christophe Merlet  <redfox@redfoxcenter.org>
+
+	* configure.in: added "oc" (Occitan) to ALL_LINGUAS.
+
 2006-06-21 Bill Haneman <bill.haneman@sun.com>
 
 	* atk/atkstateset.c:
