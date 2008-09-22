@@ -1,7 +1,7 @@
 # translation of atk.HEAD.mr.po to marathi
 # Marathi translation of atk10.pot
 # Copyright (C) 2004  Jitendra Shah.
-# This file is distributed under GPL.
+# This file is distributed under the same license as the ATK package.
 #
 # FIRST AUTHOR Pradeep Deshpande.<npdeshpande@vsnl.com>, 2004.
 # sandeep shedmake <sandeep.shedmake@gmail.com>, 2008.
