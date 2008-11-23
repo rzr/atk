@@ -20,6 +20,9 @@ LT_RELEASE = $(PKG_VER)
 INCLUDES = -FImsvc_recommended_pragmas.h \
 	-I. -I$(top_srcdir) $(GLIB_CFLAGS) $(PANGO_CFLAGS)
 
+DEFINES = \
+	-DVERSION=\"1.21.5\" -DATK_LOCALEDIR=\"/non/existing/path\"
+
 PKG_LINK = $(GLIB_LIBS) $(INTL_LIBS) $(PANGO_LIBS)
 
 MAINTAINERCLEANFILES = \
@@ -126,17 +129,22 @@ atk-enum-types.obj : atk-enum-types.h atk-enum-types.c
 $(PRJ_TOP)\config.h: $(PRJ_TOP)\config.h.win32
 	copy $(PRJ_TOP)\config.h.win32 $(PRJ_TOP)\config.h
 
+atk.def: atk.symbols
+	echo EXPORTS > atk.def
+	cl /EP -DINCLUDE_VARIABLES -DG_OS_WIN32 -DINCLUDE_INTERNAL_SYMBOLS -DALL_FILES \
+		-DG_GNUC_MALLOC= -DG_GNUC_CONST= -DG_GNUC_NULL_TERMINATED= -DG_GNUC_NORETURN= \
+		-DG_GNUC_PRINTF=;G_GNUC_PRINTF atk.symbols >> atk.def
+
+
 RESOURCE = $(PACKAGE).res
 
 $(PACKAGE).lib : $(OBJECTS)
 	lib /out:$(PACKAGE).lib $(OBJECTS)
 
 lib$(PACKAGE)-$(PKG_VER)-0.dll : $(OBJECTS) $(PACKAGE).def
-	$(CC) $(CFLAGS) -LD -Felib$(PACKAGE)-$(PKG_VER)-0.dll $(OBJECTS) $(PKG_LINK) user32.lib advapi32.lib wsock32.lib $(LDFLAGS) /def:$(PACKAGE).def
+	$(CC) $(CFLAGS) -LD -Felib$(PACKAGE)-$(PKG_VER)-0.dll $(OBJECTS) $(PKG_LINK) \
+	user32.lib advapi32.lib wsock32.lib $(LDFLAGS) /implib:$(PACKAGE)-$(PKG_VER).lib /def:$(PACKAGE).def
 
 $(PACKAGE).exe : $(OBJECTS) $(PACKAGE).def $(PACKAGE).res
 	$(CC) $(CFLAGS) -Fe$(PACKAGE).exe $(PACKAGE).res $(OBJECTS) $(PKG_LINK) \
 	user32.lib advapi32.lib shell32.lib wsock32.lib winspool.lib $(LDFLAGS) /def:$(PACKAGE).def
-
-.c.obj :
-	$(CC) $(CFLAGS) -GD -c $(PKG_CFLAGS) $<
