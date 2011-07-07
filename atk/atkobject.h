@@ -503,6 +503,7 @@ void                      (* initialize)                         (AtkObject     
    * Since ATK 1.12
    */
   AtkAttributeSet* 	  (*get_attributes)            (AtkObject                  *accessible);
+
   AtkFunction             pad1;
   AtkFunction             pad2;
 };
@@ -564,7 +565,11 @@ guint                atk_object_connect_property_change_handler  (AtkObject     
                                                                   AtkPropertyChangeHandler       *handler);
 void                 atk_object_remove_property_change_handler   (AtkObject                      *accessible,
                                                                   guint                          handler_id);
-
+void                 atk_object_notify_relation_change           (AtkObject                      *accessible,
+								  AtkRelationType		 relation_type,
+								  GPtrArray			 *targets);
+void                 atk_object_notify_attribute_change          (AtkObject                      *accessible,
+                                                                  AtkAttribute                   *attr);
 void                 atk_object_notify_state_change              (AtkObject                      *accessible,
                                                                   AtkState                       state,
                                                                   gboolean                       value);

@@ -65,6 +65,8 @@ enum {
   STATE_CHANGE,
   VISIBLE_DATA_CHANGED,
   ACTIVE_DESCENDANT_CHANGED,
+  RELATION_CHANGE,
+  ATTRIBUTE_CHANGE,
   
   LAST_SIGNAL
 };
@@ -649,6 +651,25 @@ atk_object_class_init (AtkObjectClass *klass)
 		  g_cclosure_marshal_VOID__POINTER,
 		  G_TYPE_NONE,
 		  1, G_TYPE_POINTER);
+  atk_object_signals[RELATION_CHANGE] =
+    g_signal_new ("relation_change",
+                  G_TYPE_FROM_CLASS (klass),
+                  G_SIGNAL_RUN_LAST | G_SIGNAL_DETAILED,
+                  0,
+                  (GSignalAccumulator) NULL, NULL,
+                  atk_marshal_VOID__ENUM_POINTER,
+                  G_TYPE_NONE, 2,
+		  G_TYPE_STRING,
+                  G_TYPE_POINTER);
+  atk_object_signals[ATTRIBUTE_CHANGE] =
+    g_signal_new ("attribute_change",
+                  G_TYPE_FROM_CLASS (klass),
+                  G_SIGNAL_RUN_LAST | G_SIGNAL_DETAILED,
+                  0,
+                  (GSignalAccumulator) NULL, NULL,
+                  g_cclosure_marshal_VOID__POINTER,
+                  G_TYPE_NONE, 1,
+                  G_TYPE_POINTER);
 }
 
 static void
@@ -1108,6 +1129,40 @@ atk_object_remove_property_change_handler  (AtkObject *accessible,
   klass = ATK_OBJECT_GET_CLASS (accessible);
   if (klass->remove_property_change_handler)
     (klass->remove_property_change_handler) (accessible, handler_id);
+}
+
+/**
+ * atk_object_notify_attribute_change:
+ *  @accessible: an #AtkObject
+ *  @attr: The attribute which is changed
+ *
+ * Emits a attribute-change signal for the attribute.
+ **/
+void
+atk_object_notify_attribute_change (AtkObject *accessible,
+                                    AtkAttribute *attr)
+{
+  g_return_if_fail (ATK_IS_OBJECT (accessible));
+
+  g_signal_emit (accessible, atk_object_signals[ATTRIBUTE_CHANGE],
+                 attr, NULL);
+}
+
+/**
+ * atk_object_notify_relation_change:
+ *  @accessible: an #AtkObject
+ *  @relation_type: the type of the changed relations
+ *  @targets: the targets of the relations
+ *
+ * Emits a relation-change signal for the relation.
+ **/
+void
+atk_object_notify_relation_change (AtkObject *accessible, AtkRelationType relation_type, GPtrArray *targets)
+{
+  g_return_if_fail (ATK_IS_OBJECT (accessible));
+
+  g_signal_emit (accessible, atk_object_signals[RELATION_CHANGE],
+                 relation_type, targets, NULL);
 }
 
 /**

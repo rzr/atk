@@ -55,6 +55,14 @@ in the table which has focus changes.
 @atkobject: the object which received the signal.
 @arg1: the newly focused object.
 
+<!-- ##### SIGNAL AtkObject::attribute-change ##### -->
+<para>
+
+</para>
+
+@atkobject: the object which received the signal.
+@arg1: 
+
 <!-- ##### SIGNAL AtkObject::children-changed ##### -->
 <para>
 The signal "children-changed" is emitted when a child is added or
@@ -82,6 +90,15 @@ value has changed.
 
 @atkobject: the object which received the signal.
 @arg1: The new value of the property which changed.
+
+<!-- ##### SIGNAL AtkObject::relation-change ##### -->
+<para>
+
+</para>
+
+@atkobject: the object which received the signal.
+@arg1: 
+@Param3: 
 
 <!-- ##### SIGNAL AtkObject::state-change ##### -->
 <para>
