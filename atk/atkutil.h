@@ -166,6 +166,76 @@ typedef enum {
   ATK_XY_WINDOW
 }AtkCoordType;
 
+/**
+ *AtkScrollType:
+ *@ATK_SCROLL_TYPE_TOP_LEFT:   Scroll the top left corner of the object or
+ * substring such that the top left corner (and as much as possible of the
+ * rest of the object or substring) is within the top level window. In cases
+ * where the entire object or substring fits within the top level window,
+ * the placement of the object or substring is dependent on the application.
+ * For example, the object or substring may be scrolled to the closest edge,
+ * the furthest edge, or midway between those two edges. In cases where
+ * there is a hierarchy of nested scrollable controls, more than one control
+ * may have to be scrolled.
+ *@ATK_SCROLL_TYPE_BOTTOM_RIGHT:  Scroll the bottom right corner of the
+ * object or substring such that the bottom right corner (and as much as
+ * possible of the rest of the object or substring) is within the top
+ * level window. In cases where the entire object or substring fits within
+ * the top level window, the placement of the object or substring is dependent
+ * on the application. For example, the object or substring may be scrolled
+ * to the closest edge, the furthest edge, or midway between those two edges.
+ * In cases where there is a hierarchy of nested scrollable controls, more
+ * than one control may have to be scrolled.
+ *@ATK_SCROLL_TYPE_TOP_EDGE:  Scroll the top edge of the object or substring
+ * such that the top edge (and as much as possible of the rest of the object
+ * or substring) is within the top level window. In cases where the entire
+ * object or substring fits within the top level window, the placement of the
+ * object or substring is dependent on the application. For example, the
+ * object or substring may be scrolled to the closest edge, the furthest edge,
+ * or midway between those two edges. In cases where there is a hierarchy of
+ * nested scrollable controls, more than one control may have to be scrolled.
+ *@ATK_SCROLL_TYPE_BOTTOM_EDGE:  Scroll the bottom edge of the object or
+ * substring such that the bottom edge (and as much as possible of the rest of
+ * the object or substring) is within the top level window. In cases where the
+ * entire object or substring fits within the top level window, the placement
+ * of the object or substring is dependent on the application. For example, the
+ * object or substring may be scrolled to the closest edge, the furthest edge,
+ * or midway between those two edges. In cases where there is a hierarchy of
+ * nested scrollable controls, more than one control may have to be scrolled.
+ *@ATK_SCROLL_TYPE_LEFT_EDGE:  Scroll the left edge of the object or substring
+ * such that the left edge (and as much as possible of the rest of the object
+ * or substring) is within the top level window. In cases where the entire
+ * object or substring fits within the top level window, the placement of the
+ * object or substring is dependent on the application. For example, the
+ * object or substring may be scrolled to the closest edge, the furthest edge,
+ * or midway between those two edges. In cases where there is a hierarchy of
+ * nested scrollable controls, more than one control may have to be scrolled.
+ *@ATK_SCROLL_TYPE_RIGHT_EDGE:  Scroll the right edge of the object or
+ * substring such that the right edge (and as much as possible of the rest of
+ * the object or substring) is within the top level window. In cases where the
+ * entire object or substring fits within the top level window, the placement
+ * of the object or substring is dependent on the application. For example, the
+ * object or substring may be scrolled to the closest edge, the furthest edge,
+ * or midway between those two edges. In cases where there is a hierarchy of
+ * nested scrollable controls, more than one control may have to be scrolled.
+ *@ATK_SCROLL_TYPE_ANYWHERE:  Scroll the object or substring such that as much
+ * as possible of the object or substring is within the top level window. The
+ * placement of the object is dependent on the application. For example, the
+ * object or substring may be scrolled to to closest edge, the furthest edge, or midway between those two edges.
+ *
+ * Values defining where to place an object or substring on the screen.
+ **/
+typedef enum
+{
+  ATK_SCROLL_TYPE_TOP_LEFT,
+  ATK_SCROLL_TYPE_BOTTOM_RIGHT,
+  ATK_SCROLL_TYPE_TOP_EDGE,
+  ATK_SCROLL_TYPE_BOTTOM_EDGE,
+  ATK_SCROLL_TYPE_LEFT_EDGE,
+  ATK_SCROLL_TYPE_RIGHT_EDGE,
+  ATK_SCROLL_TYPE_ANYWHERE
+} AtkScrollType;
+
 /*
  * Adds the specified function to the list of functions to be called
  * when an object receives focus.

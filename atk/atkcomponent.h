@@ -110,13 +110,22 @@ struct _AtkComponentIface
   	
   AtkLayer                 (* get_layer)        (AtkComponent   *component);
   gint                     (* get_mdi_zorder)   (AtkComponent   *component);
+  gdouble                  (* get_alpha)        (AtkComponent   *component);
+
+  gboolean (* scroll_to) (AtkComponent *component,
+                          AtkScrollType scroll_type);
+
+  gint (*get_group_position) (AtkComponent *component,
+                              gint *group_level,
+                              gint *similar_items);
 
   /*
    * signal handlers
    */
   void                     (* bounds_changed)   (AtkComponent   *component,
                                                  AtkRectangle   *bounds);
-  gdouble                  (* get_alpha)        (AtkComponent   *component);
+
+  gpointer _padding_dummy[16];
 };
 
 GType atk_component_get_type (void);
@@ -165,6 +174,11 @@ gboolean              atk_component_set_size               (AtkComponent    *com
                                                             gint            width,
                                                             gint            height);
 gdouble               atk_component_get_alpha              (AtkComponent    *component);
+gboolean atk_component_scroll_to (AtkComponent *component,
+                                  AtkScrollType scroll_type);
+gint atk_component_get_group_position (AtkComponent *component,
+                                       gint *group_level,
+                                       gint *similar_items);
 
 G_END_DECLS
 

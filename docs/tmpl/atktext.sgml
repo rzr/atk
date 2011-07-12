@@ -405,6 +405,32 @@ an object which implements AtkText changes.
 @Returns: 
 
 
+<!-- ##### FUNCTION atk_text_scroll_substring_to ##### -->
+<para>
+
+</para>
+
+@text: 
+@start_index: 
+@end_index: 
+@scroll_type: 
+@Returns: 
+
+
+<!-- ##### FUNCTION atk_text_scroll_substring_to_point ##### -->
+<para>
+
+</para>
+
+@text: 
+@start_index: 
+@end_index: 
+@x: 
+@y: 
+@coord_type: 
+@Returns: 
+
+
 <!-- ##### FUNCTION atk_text_set_selection ##### -->
 <para>
 

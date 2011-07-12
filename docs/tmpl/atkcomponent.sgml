@@ -111,6 +111,17 @@ a component changes.
 @coord_type: 
 
 
+<!-- ##### FUNCTION atk_component_get_group_position ##### -->
+<para>
+
+</para>
+
+@component: 
+@group_level: 
+@similar_items: 
+@Returns: 
+
+
 <!-- ##### FUNCTION atk_component_get_size ##### -->
 <para>
 
@@ -149,6 +160,16 @@ a component changes.
 
 @component: 
 @handler_id: 
+
+
+<!-- ##### FUNCTION atk_component_scroll_to ##### -->
+<para>
+
+</para>
+
+@component: 
+@scroll_type: 
+@Returns: 
 
 
 <!-- ##### FUNCTION atk_component_set_extents ##### -->

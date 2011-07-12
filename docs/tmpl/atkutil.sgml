@@ -36,6 +36,19 @@ The AtkUtil struct does not contain any fields.
 @ATK_XY_SCREEN: 
 @ATK_XY_WINDOW: 
 
+<!-- ##### ENUM AtkScrollType ##### -->
+<para>
+
+</para>
+
+@ATK_SCROLL_TYPE_TOP_LEFT: 
+@ATK_SCROLL_TYPE_BOTTOM_RIGHT: 
+@ATK_SCROLL_TYPE_TOP_EDGE: 
+@ATK_SCROLL_TYPE_BOTTOM_EDGE: 
+@ATK_SCROLL_TYPE_LEFT_EDGE: 
+@ATK_SCROLL_TYPE_RIGHT_EDGE: 
+@ATK_SCROLL_TYPE_ANYWHERE: 
+
 <!-- ##### FUNCTION atk_add_focus_tracker ##### -->
 <para>
 

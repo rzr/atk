@@ -1037,6 +1037,71 @@ atk_text_get_bounded_ranges (AtkText          *text,
 }
 
 /**
+ * atk_text_scroll_substring_to:
+ * @text: an #AtkText
+ * @start_index: the start index of the string that should be scrolled
+ * @end_index: the end index of the string that should be scrolled
+ * @scroll_type: the type of scrolling desired
+ *
+ * Makes a specific part of a string visible on screen.
+ *
+ * Returns: %TRUE if success, %FALSE otherwise.
+ *
+ * Since: 3.0
+ **/
+gboolean
+atk_text_scroll_substring_to (AtkText *text,
+                              gint start_index,
+                              gint end_index,
+                              AtkScrollType scroll_type)
+{
+  AtkTextIface *iface;
+
+  g_return_val_if_fail (ATK_IS_TEXT (text), FALSE);
+  iface = ATK_TEXT_GET_IFACE (text);
+
+  if (iface->scroll_substring_to)
+    return (*(iface->scroll_substring_to)) (text, start_index, end_index, scroll_type);
+  else
+    return FALSE;
+}
+
+/**
+ * atk_text_scroll_substring_to_point:
+ * @text: an #AtkText
+ * @start_index: the start index of the string that should be scrolled
+ * @end_index: the end index of the string that should be scrolled
+ * @x: the X coordinate to which the string should be scrolled
+ * @y: the Y coordinate to which the string should be scrolled
+ * @coord_type: Specify whether coordinates are relative to the screen or widget window.
+ *
+ * Moves the top left of a substring to a specified location.
+ *
+ * Returns: %TRUE if success, %FALSE otherwise.
+ *
+ * Since: 3.0
+ **/
+gboolean
+atk_text_scroll_substring_to_point (AtkText *text,
+                                    gint start_index,
+                                    gint end_index,
+                                    gint x,
+                                    gint y,
+                                    AtkCoordType coord_type)
+{
+  AtkTextIface *iface;
+
+  g_return_val_if_fail (ATK_IS_TEXT (text), FALSE);
+
+  iface = ATK_TEXT_GET_IFACE (text);
+
+  if (iface->scroll_substring_to_point)
+    return (*(iface->scroll_substring_to_point)) (text, start_index, end_index, x, y, coord_type);
+  else
+    return FALSE;
+}
+
+/**
  * atk_attribute_set_free:
  * @attrib_set: The #AtkAttributeSet to free
  *

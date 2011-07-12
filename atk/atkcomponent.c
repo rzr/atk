@@ -402,6 +402,52 @@ atk_component_get_alpha (AtkComponent    *component)
 }
 
 /**
+ * atk_component_get_group_position:
+ * @component: an #AtkComponent
+ * @group_level: (out): the group's level of nesting.  1 based, 0 indicates
+ * that this value is not applicable.
+ * @similar_items: (out): the total number of items in this group, including
+ * the item being queried.  1 based, 0 indicates that this value is not
+ * applicable.
+ *
+ * Returns grouping information.
+ * Used for tree items, list items, tab panel labels, radio buttons, etc.
+ * Also used for collections of non-text objects.
+ *
+ * Note: This method is meant to describe the nature of an object's
+ * containment structure. It's exposed by trees, tree grids, nested lists,
+ * nested menus, but not headings, which uses the level object attribute. It
+ * is also exposed by radio buttons (with groupLevel == 0).  This is normally
+ * not implemented on a combo box to describe the nature of its contents.
+ * Normally an AT will get that information from its child list object.
+ * However, in some cases when non-edit combo boxes are not able to be
+ * structured such that the list is a child of the combo box, this method is
+ * implemented on the combo box itself. ATs can use this interface if a child
+ * list is not found.
+ *
+ * Returns: an index into the objects in the current group (this is not an
+ * index into all the objects at the same group level.  1 based, 0 indicates
+ * that this value is not applicable.
+ *
+ * Since: 3.0
+ **/
+gint
+atk_component_get_group_position (AtkComponent    *component,
+                                  gint *group_level,
+                                  gint *similar_items)
+{
+  AtkComponentIface *iface = NULL;
+  g_return_val_if_fail (ATK_IS_COMPONENT (component), -1);
+
+  iface = ATK_COMPONENT_GET_IFACE (component);
+
+  if (iface->get_group_position)
+    return (iface->get_group_position) (component, group_level, similar_items);
+  else
+    return -1;
+}
+
+/**
  * atk_component_grab_focus:
  * @component: an #AtkComponent
  *
@@ -419,6 +465,31 @@ atk_component_grab_focus (AtkComponent    *component)
 
   if (iface->grab_focus)
     return (iface->grab_focus) (component);
+  else
+    return FALSE;
+}
+
+/**
+ * atk_component_scroll_to:
+ * @component: an #AtkComponent
+ * @scroll_type: a #AtkScrollType describing the type of scrolling desired
+ *
+ * Makes an object visible on the screen.
+ *
+ * Returns: %TRUE if successful, %FALSE otherwise.
+ *
+ * Since: 3.0
+ **/
+gboolean
+atk_component_scroll_to (AtkComponent *component, AtkScrollType scroll_type)
+{
+  AtkComponentIface *iface = NULL;
+  g_return_val_if_fail (ATK_IS_COMPONENT (component), FALSE);
+
+  iface = ATK_COMPONENT_GET_IFACE (component);
+
+  if (iface->scroll_to)
+    return (iface->scroll_to) (component, scroll_type);
   else
     return FALSE;
 }

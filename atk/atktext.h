@@ -250,6 +250,27 @@ struct _AtkTextIface
 						   gint		    end_offset);
   gboolean       (* set_caret_offset)             (AtkText          *text,
                                                    gint             offset);
+  void           (* get_range_extents)            (AtkText          *text,
+                                                   gint             start_offset,
+                                                   gint             end_offset,
+                                                   AtkCoordType     coord_type,
+                                                   AtkTextRectangle *rect);
+  AtkTextRange** (* get_bounded_ranges)           (AtkText          *text,
+                                                   AtkTextRectangle *rect,
+                                                   AtkCoordType     coord_type,
+                                                   AtkTextClipType  x_clip_type,
+                                                   AtkTextClipType  y_clip_type);
+  gboolean (*scroll_substring_to) (AtkText *text,
+                                   gint start_index,
+                                   gint end_index,
+                                   AtkScrollType scroll_type);
+  gboolean (*scroll_substring_to_point) (AtkText *text,
+                                         gint start_index,
+                                         gint end_index,
+                                         gint x,
+                                         gint y,
+                                         AtkCoordType coord_type);
+ 
 
   /*
    * signal handlers
@@ -263,21 +284,7 @@ struct _AtkTextIface
 
   void           (* text_attributes_changed)      (AtkText          *text);
 
-
-  void           (* get_range_extents)            (AtkText          *text,
-                                                   gint             start_offset,
-                                                   gint             end_offset,
-                                                   AtkCoordType     coord_type,
-                                                   AtkTextRectangle *rect);
-
-  AtkTextRange** (* get_bounded_ranges)           (AtkText          *text,
-                                                   AtkTextRectangle *rect,
-                                                   AtkCoordType     coord_type,
-                                                   AtkTextClipType  x_clip_type,
-                                                   AtkTextClipType  y_clip_type);
- 
-
-  AtkFunction    pad4;
+  gpointer _padding_dummy[16];
 };
 
 GType            atk_text_get_type (void);
@@ -355,6 +362,17 @@ AtkTextRange**  atk_text_get_bounded_ranges               (AtkText          *tex
                                                            AtkCoordType     coord_type,
                                                            AtkTextClipType  x_clip_type,
                                                            AtkTextClipType  y_clip_type);
+gboolean atk_text_scroll_substring_to (AtkText *text,
+                                       gint start_index,
+                                       gint end_index,
+                                       AtkScrollType scroll_type);
+gboolean atk_text_scroll_substring_to_point (AtkText *text,
+                                             gint start_index,
+                                             gint end_index,
+                                             gint x,
+                                             gint y,
+                                             AtkCoordType coord_type);
+ 
 void          atk_text_free_ranges                        (AtkTextRange     **ranges);
 void 	      atk_attribute_set_free                      (AtkAttributeSet  *attrib_set);
 const gchar*  atk_text_attribute_get_name                 (AtkTextAttribute attr);

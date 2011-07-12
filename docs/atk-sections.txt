@@ -28,10 +28,12 @@ atk_component_get_extents
 atk_component_get_layer
 atk_component_get_mdi_zorder
 atk_component_get_position
+atk_component_get_group_position
 atk_component_get_size
 atk_component_grab_focus
 atk_component_ref_accessible_at_point
 atk_component_remove_focus_handler
+atk_component_scroll_to
 atk_component_set_extents
 atk_component_set_position
 atk_component_set_size
@@ -416,6 +418,8 @@ atk_text_get_n_selections
 atk_text_get_selection
 atk_text_add_selection
 atk_text_remove_selection
+atk_text_scroll_substring_to
+atk_text_scroll_substring_to_point
 atk_text_set_selection
 atk_text_set_caret_offset
 atk_attribute_set_free
@@ -531,6 +535,7 @@ ATK_STREAMABLE_CONTENT_GET_IFACE
 <TITLE>AtkUtil</TITLE>
 AtkUtil
 AtkCoordType
+AtkScrollType
 atk_add_focus_tracker
 atk_remove_focus_tracker
 atk_focus_tracker_init
